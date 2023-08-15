@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Caller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600&family=Josefin+Slab&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body class="h-100">
+  <button id="share">Share</button>
+
+  <div>
+    <video id="screen" autoplay muted width="500" height="500"></video>
+  </div>
+
+  </div>
+
+  <!-- Import SocketIO for signalling -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Import WebRTC adapter for compatibility with all the browsers  -->
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
+  <!-- Import TURN config -->
+  <script src="js\config.js"></script>
+
+  <!-- Import script containing WebRTC related functions -->
+  <script src="js\caller.js"></script>
+
+</body>
+
+</html>

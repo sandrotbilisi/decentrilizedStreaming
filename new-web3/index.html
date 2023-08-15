@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 project</title>
+</head>
+
+<body>
+    <button onclick="createStream()">CreateStream</button>
+    <script src="./LiveStreaming.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script>
+        const web3 = new Web3("https://cloudflare-eth.com")
+
+        web3.eth.getBlockNumber(function (error, result) {
+            console.log(result)
+        })
+
+
+        // let account = null
+
+        // window.ethereum.request({ method: 'eth_requestAccounts' }).then(async accounts => {
+        //     if (accounts[0]) {
+        //         account = accounts[0];
+        //     }
+
+        //     const liveStream = new web3.eth.Contract(LIVE_STREAM_ABI, "0xb458c08f57b781e724f8b8b5da9e5413ed238fda")
+        //     console.log(liveStream.methods)
+        //     const resp = await liveStream.methods.createStream(10).send({ from: account })
+        //     console.log(resp);
+        // })
+
+
+        function createStream() {
+
+        }
+    </script>
+
+</body>
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> f1d6cb5 (demo)

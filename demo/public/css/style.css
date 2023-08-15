@@ -1,0 +1,166 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+/* BUTTON */
+
+
+.kave-btn {
+  position: relative;
+  border: solid 1px rgba(0, 214, 252, 0.3);
+  background: none;
+  color: #00d6fc;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1.8px;
+  /* width: 200px;
+  height: 70px; */
+  padding: 0;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.kave-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 60px;
+  height: 1px;
+  transform: translateY(-1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+
+.kave-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 60px;
+  height: 1px;
+  transform: translateY(1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+
+.kave-btn:hover {
+  box-shadow: 1px 1px 8px rgba(0, 214, 252, 0.3);
+  color: #00d6fc;
+  text-shadow: 0 0 8px rgba(0, 214, 252, 0.4);
+}
+
+.kave-btn:hover.kave-btn:before {
+  left: 0;
+  width: 20px;
+}
+
+.kave-btn:hover.kave-btn:after {
+  right: 0;
+  width: 20px;
+}
+
+.kave-btn:hover .kave-line:before {
+  bottom: 0;
+}
+
+.kave-btn:hover .kave-line:after {
+  top: 0;
+}
+
+.kave-line:before {
+  content: "";
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+  width: 1px;
+  height: 20px;
+  transform: translateX(1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+
+.kave-line:after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 1px;
+  height: 20px;
+  transform: translateX(-1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+
+/* END OF BUTTON */
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#video {
+  pointer-events: none;
+  /* opacity: 0; */
+}
+
+.intro-buttons {
+  position: fixed;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  opacity: 1;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.stream-btn {
+  padding: 20px 30px;
+  margin: 10px;
+  font-weight: 700;
+  pointer-events: all;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease-in;
+}

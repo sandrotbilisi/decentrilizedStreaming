@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Streaming</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+</head>
+<body>
+    <button id="connectWallet">Connect Wallet</button>
+    <div>
+        <h1>Create Stream</h1>
+        <label for="fee">Fee:</label>
+        <input type="text" id="fee" placeholder="Enter stream fee in wei">
+        <button id="createStreamBtn">Create Stream</button>
+    </div>
+    
+    <hr>
+    
+    <div>
+        <h1>Join Stream</h1>
+        <label for="streamId">Stream ID:</label>
+        <input type="text" id="streamId" placeholder="Enter stream ID">
+        <button id="joinStreamBtn">Join Stream</button>
+    </div>
+    
+    <hr>
+    
+    <div>
+        <h1>Streams</h1>
+        <table id="streamTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Owner</th>
+                    <th>Active</th>
+                    <th>Fee</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    
+    <hr>
+    
+    <div>
+        <h1>Comments</h1>
+        <label for="commentStreamId">Stream ID:</label>
+        <input type="text" id="commentStreamId" placeholder="Enter stream ID">
+        <br>
+        <label for="commentContent">Comment:</label>
+        <input type="text" id="commentContent" placeholder="Enter comment">
+        <br>
+        <button id="commentBtn">Comment</button>
+        <br><br>
+        <table id="commentTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Stream ID</th>
+                    <th>Author</th>
+                    <th>Content</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="LiveStreaming.js"></script>
+    <script src="./test.js"></script>
+</body>
+</html>
